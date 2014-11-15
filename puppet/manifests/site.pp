@@ -7,3 +7,7 @@ class { 'baseconfig':
 class { 'ubuntu':
   stage => 'base_install'
 }
+
+class { 'pip':
+  stage => 'maec_prep'
+}
