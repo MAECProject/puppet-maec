@@ -9,5 +9,6 @@ class { 'ubuntu':
 }
 
 class { 'pip':
-  stage => 'maec_prep'
+  stage => 'maec_install'
 }
+

@@ -7,11 +7,19 @@ class pip {
   }
 
   package { [
-      'virtualenv',
-      'virtualenvwrapper',
       'vim_debug',
       'isort']:
     ensure => latest,
-    provider => pip,
+    provider => pip;
   }
+
+  package { 
+    'cybox':
+      ensure   => '2.1.0.8',
+      provider => pip;
+    'maec':
+      ensure   => '4.1.0.8',
+      provider => pip;
+  }
+
 }
